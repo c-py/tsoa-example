@@ -1,3 +1,4 @@
+import {Request} from 'express';
 import {Route, Get, Post, Delete, Patch, Example, Body} from 'tsoa';
 import {User, UserCreateRequest, UserUpdateRequest} from '../models/user';
 
@@ -9,15 +10,15 @@ export class UsersController {
     @Example<User>({
         createdAt: new Date(),
         email: 'test@test.com',
-        id: 1,
-        headers: 'dummy'
+        headers: 'dummy',
+        id: 1  
     })
     public async Current( @Request() request: any ): Promise<User> {
         return {
             createdAt: new Date(),
             email: 'test',
-            id: 666,
-            headers: 'dummy'
+            headers: 'dummy',
+            id: 666
         };
     }
 
@@ -27,8 +28,8 @@ export class UsersController {
         return {
             createdAt: new Date(),
             email: 'test2',
-            id: userId,
-            headers: 'dummy'
+            headers: 'dummy',
+            id: userId
         };
     }
 
@@ -41,8 +42,9 @@ export class UsersController {
         return {
             createdAt: new Date(),
             email: request.email,
-            id: 666,
-            headers: 'dummy'
+            headers: 'dummy',
+            id: 666
+            
         };
     }
 
@@ -58,8 +60,8 @@ export class UsersController {
         return {
             createdAt: request.createdAt,
             email: request.email,
-            id: 1337,
-            headers: 'dummy'
+            headers: 'dummy',
+            id: 1337
         };
     }
 }
