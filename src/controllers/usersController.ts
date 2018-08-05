@@ -12,7 +12,7 @@ export class UsersController {
         id: 1,
         headers: 'dummy'
     })
-    public async Current( @Request() request: any ): Promise<User> {
+    public async Current( headers: string ): Promise<User> {
         return {
             createdAt: new Date(),
             email: 'test',
