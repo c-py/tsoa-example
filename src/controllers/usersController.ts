@@ -11,11 +11,12 @@ export class UsersController {
         email: 'test@test.com',
         id: 1,
     })
-    public async Current(): Promise<User> {
+    public async Current( @Request() request: any ): Promise<User> {
         return {
             createdAt: new Date(),
             email: 'test',
-            id: 666
+            id: 666,
+            headers: request.headers
         };
     }
 
