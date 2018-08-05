@@ -10,6 +10,7 @@ export class UsersController {
         createdAt: new Date(),
         email: 'test@test.com',
         id: 1,
+        headers: 'dummy'
     })
     public async Current( @Request() request: any ): Promise<User> {
         return {
@@ -26,7 +27,8 @@ export class UsersController {
         return {
             createdAt: new Date(),
             email: 'test2',
-            id: userId
+            id: userId,
+            headers: 'dummy'
         };
     }
 
@@ -39,7 +41,8 @@ export class UsersController {
         return {
             createdAt: new Date(),
             email: request.email,
-            id: 666
+            id: 666,
+            headers: 'dummy'
         };
     }
 
@@ -55,7 +58,8 @@ export class UsersController {
         return {
             createdAt: request.createdAt,
             email: request.email,
-            id: 1337
+            id: 1337,
+            headers: 'dummy'
         };
     }
 }
