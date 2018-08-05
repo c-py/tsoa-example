@@ -1,5 +1,4 @@
-import {Request} from 'express';
-import {Route, Get, Post, Delete, Patch, Example, Body} from 'tsoa';
+import {Route, Get, Post, Delete, Patch, Example, Body, Request} from 'tsoa';
 import {User, UserCreateRequest, UserUpdateRequest} from '../models/user';
 
 @Route('Users')
