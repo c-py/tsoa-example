@@ -21,7 +21,7 @@ export class AccountsController {
                 createdAt: new Date(),
                 email: 'test@test.com',
                 headers: 'dummy',
-                id: 1 
+                id: 1
             },
             {
                 createdAt: new Date(),
